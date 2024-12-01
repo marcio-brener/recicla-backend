@@ -23,7 +23,8 @@ export class ProdutoService {
         status: true,
         mensagem: "Produto cadastrado com sucesso!"
       }
-    }).catch(() => {
+    }).catch((error) => {
+      console.error('Erro ao cadastrar usuário:', error);
       return <ResultadoDto>{
         status: false,
         mensagem: "Houve um erro ao cadastrar o produto!"
