@@ -21,7 +21,7 @@ export class Usuario {
   @Column({ length: 100 })
   endereco: string;
 
-  @Column({length: 14})
+  @Column({length: 18})
   cnpj: string;
 
   @OneToMany(() => Produto, produto => produto.usuario)

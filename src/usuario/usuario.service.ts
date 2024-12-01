@@ -28,13 +28,14 @@ export class UsuarioService {
     .then((result) => {
       return <ResultadoDto>{
         status: true,
-        mensagem: "Usuário cadastrado com sucesso"
+        mensagem: "Usuário cadastrado com sucesso!"
       }
     })
     .catch((error) => {
+      console.error('Erro ao cadastrar usuário:', error);
       return <ResultadoDto>{
         status: false,
-        mensagem: "Houve um errro ao cadastrar o usuário"
+        mensagem: "Houve um errro ao cadastrar o usuário!"
       }
     })    
   }
