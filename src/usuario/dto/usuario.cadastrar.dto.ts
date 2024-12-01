@@ -3,5 +3,6 @@ export interface UsuarioCadastrarDto{
     email: string;
     senha: string;
     telefone: string;
-    cpf: string;
+    cnpj: string;
+    endereco: string;
 }

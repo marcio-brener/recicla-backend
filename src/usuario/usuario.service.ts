@@ -22,7 +22,8 @@ export class UsuarioService {
     usuario.nome = data.nome
     usuario.password = bcrypt.hashSync(data.senha, 8)
     usuario.telefone = data.telefone
-    usuario.cpf = data.cpf
+    usuario.endereco = data.endereco
+    usuario.cnpj = data.cnpj
     return this.usuarioRepository.save(usuario)
     .then((result) => {
       return <ResultadoDto>{

@@ -18,8 +18,11 @@ export class Usuario {
   @Column({length: 15})
   telefone: string;
 
+  @Column({ length: 100 })
+  endereco: string;
+
   @Column({length: 14})
-  cpf: string;
+  cnpj: string;
 
   @OneToMany(() => Produto, produto => produto.usuario)
   produtos: Produto[];
